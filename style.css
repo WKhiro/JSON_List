@@ -1,3 +1,5 @@
+/* Wesley Kok */
+
 html {
   font-family: "Dosis", sans-serif;
   box-sizing: border-box;
@@ -9,78 +11,35 @@ html {
   margin: 0 auto;
 }
 
-.header {
+#titleText {
   text-align: center;
-}
-
-/* Shrinks the logo without stretching it */
-#logoContainer {
-  display: inline-block;
-  vertical-align: middle;
-  width: 30%;
-  margin: 0 auto;
-  padding-right: 20px;
-}
-
-#logo {
-  margin: 1rem auto;
-  max-width: 100%;
-}
-
-.apiText {
-  display: inline-block;
-  vertical-align: middle;
   color: white;
   font-size: 70px;
 }
 
 /* Contains all the cards */
 .container {
-  column-count: 4;
+  column-count: 5;
   column-gap: 1em;
+  margin: 0 0 20px 0;
+  padding: 0 20px 0 20px;
 }
 
-/* Imgur titles */
+/* ListId titles */
 h1 {
   text-align: center;
   color: white;
   padding: 1.5rem 2.5rem;
   border-radius: 12px 12px 0 0;
-  /* Moves up the title to prevent a white line at the top */
-  margin: 0 0 0 0;
-  font-size: 1.5rem;
+  margin: 0 20px 5px 20px;
   background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
 }
 
-/* Contains the Imgur titles and images */
+/* Contains the ListId titles and items */
 .card {
   margin-top: 20px;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
-  /* Delays transition speed on hover*/
-  transition: all 0.2s linear;
   display: inline-block;
   width: 100%;
-}
-
-.card:hover {
-  /* Make the shadow darker */
-  box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
-  transform: translate3D(0, -2px, 0);
-}
-
-.imgurImg,
-.imgurImgLast {
-  display: block;
-  width: 100%;
-}
-
-.imgurImgLast {
-  border-radius: 0 0 12px 12px;
-}
-
-.imgurImg:hover,
-.imgurImgLast:hover {
-  opacity: 0.8;
 }
 
 /* Mixes up the gradient colors for the cards */
@@ -96,58 +55,19 @@ h1 {
   background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
 }
 
-.search {
-  display: inline-block;
-}
-
-.searchContainer {
+/* ListId items */
+h3 {
   text-align: center;
-}
-
-/* Modal box (Hidden by default) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-/* The modal image itself */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-/* Zoom in the Modal */
-.modal-content {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-.tagsContainer {
-  display: block;
-  margin-top: 20px;
-}
-
-.tagCard {
-  display: inline-block;
+  background: gray;
+  border-radius: 4px;
   border: 2px solid gray;
-  padding: 3px;
   color: white;
+  margin: 0 0 5px 0;
+  break-inside: avoid;
+  /* Delays transition speed on hover*/
+  transition: all 0.2s linear;
+}
+
+h3:hover {
+  transform: translate3D(0, -2px, 0);
 }
